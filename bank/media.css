@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+    .logInBox{
+        width:300px;
+        height:356px;
+        border-radius: 15px;
+        position:absolute;
+        left:53%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+    #main_sidebar {
+        overflow: visible !important;  
+    }
+    .box1 {
+       margin: 10px auto !important;
+    }
+  }

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="bank/dask.css" />
+    <link rel="stylesheet" href="bank/media.css" />
+  </head>
+  <body>
+    <div id="outer">
+      <div id="main_sidebar">
+        <div id="sidebar_fixed">
+          <img
+            src="bank/images/mainLogo.svg"
+            class="img-fluid mainlogo"
+            alt="..."
+          />
+
+          <div class="list">
+             <a href="/logIn.html" class="active"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
+             <a href="/CreateBusiness.html"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
+             <a href="/Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
+             <a href="/Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
+             <a href="/Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
+          </div>
+        </div>
+      </div>
+      <div id="main_page">
+        <div class="logo">
+          <nav class="navbarMain">
+            <span class="icontoggle ms-2">
+              <img src="bank/images/hemburger.svg" alt="">
+            </span>
+            <div class="detail mx-4 ">
+              <span class="me-2"> <img src="bank/images/bell.svg" alt=""> </i></span>
+              <span><img src="bank/images/usersideicon.svg" alt=""> </i></span>
+            </div>
+          </nav>
+
+          <!-- ________________________________________________container  -->
+          
+          <div class="container-fluid ">
+            <div class="row head">
+              <div class="col"><h5>Dashboard</h5></div>
+              <div class="col-auto"><p>Dashboard</p></div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row marginBox">
+                  <div class="col-md-6 col-lg-auto">
+                    
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" >Date Range</span>
+                      <input type="text" class="form-control daterange">
+                    </div>
+
+    
+                  </div>
+
+                  <div class="col  box2">
+                      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Today</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Week</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Month</button>
+                        </li>
+                        <li class="nav-item border border-0" role="presentation" >
+                          <button class="nav-link" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="false" >Quarter</button>
+                        </li>
+                      </ul>
+                  
+                  </div>
+                </div>
+              <div class="col-auto"></div>
+
+
+<!-- _______________________________________________________________change -->
+
+              <div class="container overflow-hidden m-0 mt-4">
+
+
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="row gx-4 gy-2 boxs4 text-center ">
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                       <div class=" b1 bg-light"><h5>25</h5><p>Total Case Assigned</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class="  b2 bg-light"><h5>22</h5><p>Solved Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class="  b3 bg-light"><h5>1</h5><p>Default Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class="  b4 bg-light"><h5>5</h5><p>Pending Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class="  b5 bg-light"><h5>22</h5><p>Case Clearance Rate</p></div>
+                      </div>
+                    </div>
+                  <div class="row mt-3">
+                    <div class="col-lg-6 "><div class="imgCenter1"><img src="bank/images/graph1.svg" class="img-fluid " alt="..."></div></div>
+                    <div class="col-lg-6 "><div class="imgCenter2"><img src="bank/images/circle.svg" class="img-fluid" alt=".."></div></div>
+                  </div>
+                  <div class="row mt-5 text-center">
+                    <div class="col mx-3">
+                     
+                      <table class="table">
+                        <thead class="tableBorder ">
+                          <tr>
+                            <th >Loan Type</th>
+                            <th >EMI Missed</th>
+                            <th>Amount</th>
+                            <th >Recovered Amount</th>
+                            <th >Pending Amount</th>
+                            <th >Recovery Rate</th>
+                          </tr>
+                        </thead>
+                        <tbody class="tableBorder">
+                          <tr>
+                            <td>Home Loan</td>
+                            <td>30</td>
+                            <td>75000</td>
+                            <td>73500</td>
+                            <td>1500</td>
+                            <td>98%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  </div>
+
+
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                    <div class="row gx-4 gy-2 boxs4 text-center ">
+                      <div class="col ">
+                       <div class=" b1 bg-light"><h5>250</h5><p>Total Case Assigned</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b2 bg-light"><h5>2200</h5><p>Solved Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b3 bg-light"><h5>100</h5><p>Default Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b4 bg-light"><h5>50</h5><p>Pending Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b5 bg-light"><h5>2200</h5><p>Case Clearance Rate</p></div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-lg-6 "><div class="imgCenter1"><img src="bank/images/graph1.svg" class="img-fluid " alt="..."></div></div>
+                      <div class="col-lg-6 "><div class="imgCenter2"><img src="bank/images/circle1.svg" class="img-fluid" alt=".."></div></div>
+                    </div>
+                  <div class="row mt-5 text-center">
+                    <div class="col mx-3">
+                      <table class="table">
+                        <thead class="tableBorder ">
+                          <tr>
+                            <th >Loan Type</th>
+                            <th >EMI Missed</th>
+                            <th>Amount</th>
+                            <th >Recovered Amount</th>
+                            <th >Pending Amount</th>
+                            <th >Recovery Rate</th>
+                          </tr>
+                        </thead>
+                        <tbody class="tableBorder">
+                          <tr>
+                            <td>Home Loan</td>
+                            <td>30</td>
+                            <td>75000</td>
+                            <td>73500</td>
+                            <td>1500</td>
+                            <td>98%</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  </div>
+
+
+
+                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                    <div class="row gx-4 gy-2 boxs4 text-center ">
+                      <div class="col ">
+                       <div class=" b1 bg-light"><h5>25000</h5><p>Total Case Assigned</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b2 bg-light"><h5>2200</h5><p>Solved Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b3 bg-light"><h5>1000</h5><p>Default Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b4 bg-light"><h5>5000</h5><p>Pending Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b5 bg-light"><h5>22000</h5><p>Case Clearance Rate</p></div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-lg-6 "><div class="imgCenter1"><img src="bank/images/graph1.svg" class="img-fluid " alt="..."></div></div>
+                      <div class="col-lg-6 "><div class="imgCenter2"><img src="bank/images/circle1.svg" class="img-fluid" alt=".."></div></div>
+                    </div>
+                  <div class="row mt-5 text-center">
+                    <div class="col mx-3">
+                      <table class="table">
+                        <thead class="tableBorder ">
+                          <tr>
+                            <th >Loan Type</th>
+                            <th >EMI Missed</th>
+                            <th>Amount</th>
+                            <th >Recovered Amount</th>
+                            <th >Pending Amount</th>
+                            <th >Recovery Rate</th>
+                          </tr>
+                        </thead>
+                        <tbody class="tableBorder">
+                          <tr>
+                            <td>Home Loan</td>
+                            <td>30</td>
+                            <td>75000</td>
+                            <td>73500</td>
+                            <td>1500</td>
+                            <td>98%</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  </div>
+
+
+                  <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab" tabindex="0">
+                    <div class="row gx-4 gy-2 boxs4 text-center ">
+                      <div class="col ">
+                       <div class=" b1 bg-light"><h5>25000</h5><p>Total Case Assigned</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b2 bg-light"><h5>2200</h5><p>Solved Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b3 bg-light"><h5>1000</h5><p>Default Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b4 bg-light"><h5>5000</h5><p>Pending Case</p></div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg ">
+                        <div class=" b5 bg-light"><h5>22000</h5><p>Case Clearance Rate</p></div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-lg-6 "><div class="imgCenter1"><img src="bank/images/graph1.svg" class="img-fluid " alt="..."></div></div>
+                      <div class="col-lg-6 "><div class="imgCenter2"><img src="bank/images/circle1.svg" class="img-fluid" alt=".."></div></div>
+                    </div>
+                  <div class="row mt-5 text-center">
+                    <div class="col mx-3">
+                      <table class="table">
+                        <thead class="tableBorder ">
+                          <tr>
+                            <th >Loan Type</th>
+                            <th >EMI Missed</th>
+                            <th>Amount</th>
+                            <th >Recovered Amount</th>
+                            <th >Pending Amount</th>
+                            <th >Recovery Rate</th>
+                          </tr>
+                        </thead>
+                        <tbody class="tableBorder">
+                          <tr>
+                            <td>Home Loan</td>
+                            <td>30</td>
+                            <td>75000</td>
+                            <td>73500</td>
+                            <td>1500</td>
+                            <td>98%</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  </div>
+
+                  
+
+                </div>
+
+          </div>
+
+
+      
+
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+      integrity="sha512-qzrZqY/kMVCEYeu/gCm8U2800Wz++LTGK4pitW/iswpCbjwxhsmUwleL1YXaHImptCHG0vJwU7Ly7ROw3ZQoww=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.icontoggle').click(function () {
+          $('#main_sidebar').toggleClass('show');
+        });
+      });
+ 
+  $(function() {
+    $('.daterange').daterangepicker({
+      opens: 'left'
+    }, function(start, end, label) {
+      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+  });
+  </script>
+  </body>
+</html>
