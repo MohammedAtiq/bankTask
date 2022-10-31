@@ -35,23 +35,29 @@
           />
 
           <div class="list">
-             <a href="/logIn.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
-             <a href="/CreateBusiness.html" class="active"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
-             <a href="/Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
-             <a href="/Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
-             <a href="/Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
+             <a href="dashboard.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
+             <a href="Business.html" class="active"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
+             <a href="Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
+             <a href="Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
+             <a href="Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
           </div>
         </div>
        </div>
        <div id="main_page">
-        <div class="logo">
           <nav class="navbarMain">
-            <span class="icontoggle ms-2">
+            <span class="icontoggle ms-3">
               <img src="bank/images/hemburger.svg" alt="">
             </span>
-            <div class="detail mx-4 ">
-              <span class="me-2"> <img src="bank/images/bell.svg" alt=""> </i></span>
-              <span><img src="bank/images/usersideicon.svg" alt=""> </i></span>
+            <div class="detail mx-4 d-flex ">
+              <div class="me-2"> <img src="bank/images/bell.svg" alt=""> </div>
+              <div  class="dropdown">
+                <button class="btn dropdown-toggle  logInIcon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="bank/images/usersideicon.svg" alt=""> 
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <button onclick="location.href='login.html'" style="cursor: pointer; border: none"><i class="fa fa-user mx-2" aria-hidden="true"></i> Profile</button>
+                  <button onclick="location.href='login.html'" style="cursor: pointer;  border: none"> <i class="fa fa-sign-out mx-2" aria-hidden="true"> </i>Login</button>
+                </ul>
             </div>
           </nav>
 
@@ -62,16 +68,8 @@
               <div class="col"><h5>Business Service Partners</h5></div>
               <div class="col-auto"><p>Business / Create Business</p></div>
             </div>
-          </div>
-         
-
-
-<!-- _______________________________________________________________change -->
-
-              <div class="container-fluid  mt-4">
-    
-
-                  <div class="card mx-4">
+        
+                  <div class="card mt-4">
                     <h5 class="card-header">Business Info</h5>
                     <div class="card-body">
                       <div class="row">
@@ -104,12 +102,9 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> 
 
-                
-              </div>
-              <div class="container-fluid  mt-4">
-                  <div class="card mx-4">
+                  <div class="card mt-4">
                     <h5 class="card-header">License Info</h5>
                     <div class="card-body">
                       <div class="row p-3 ">
@@ -169,16 +164,13 @@
                       </div>
                     </div>
                   </div>             
-              </div>
-
-              
+    
                 <div class="col text-center mt-5">
                   <button type="button" class="btn btn-secondary inpBtn1">Reset</button>
-                  <button type="button" class="btn btn-primary inpBtn1">Create</button>
+                  <button type="button" class="btn btn-primary inpBtn1"><a href=""></a> Create</button>
                 </div>
-           
-
-      
+         </div>
+  
       </div>
     </div>
 

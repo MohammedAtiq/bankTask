@@ -34,23 +34,30 @@
           />
 
           <div class="list">
-             <a href="/logIn.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
-             <a href="/CreateBusiness.html"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
-             <a href="/Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
-             <a href="/Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
-             <a href="/Users.html" class="active"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
+             <a href="dashboard.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
+             <a href="Business.html"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
+             <a href="Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
+             <a href="Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
+             <a href="Users.html" class="active"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
           </div>
         </div>
       </div>
       <div id="main_page">
-        <div class="logo">
           <nav class="navbarMain">
             <span class="icontoggle ms-2">
               <img src="bank/images/hemburger.svg" alt="">
             </span>
-            <div class="detail mx-4 ">
-              <span class="me-2"> <img src="bank/images/bell.svg" alt=""> </i></span>
-              <span><img src="bank/images/usersideicon.svg" alt=""> </i></span>
+            <div class="detail mx-3 d-flex ">
+              <div class="me-2"> <img src="bank/images/bell.svg" alt=""> </div>
+              <div  class="dropdown">
+                <button class="btn dropdown-toggle  logInIcon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="bank/images/usersideicon.svg" alt=""> 
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <button onclick="location.href='login.html'" style="cursor: pointer; border: none"><i class="fa fa-user mx-2" aria-hidden="true"></i> Profile</button>
+                  <button onclick="location.href='login.html'" style="cursor: pointer;  border: none"> <i class="fa fa-sign-out mx-2" aria-hidden="true"> </i>Login</button>
+                </ul>
+              </div>
             </div>
           </nav>
 
@@ -67,14 +74,16 @@
                           Create User
                         </button>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/CreatUser.html">Create User </a></li>
-                          <li><a class="dropdown-item" href="/userBulkUpload.html">Bulk Upload</a></li>
+                          
+                          <li> <button type="button" class="btn btn-outline-primary border-0" onclick="location.href='CreatUser.html';">Create User</button></li>
+                          <li> <button type="button" class="btn btn-outline-primary border-0" onclick="location.href='userBulkUpload.html';">Bulk Upload</button></li>
+                        
                         </ul>
                       </div>
                     </div>
                 </div>
 
-                <div class="row loanForm card-body">
+                <div class="row ">
                     <div class="col-6 mx-auto">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -82,13 +91,11 @@
                                 <button class="btn btn-outline-secondary" type="button"><i class="fa fa-sliders" aria-hidden="true"></i>Filters</button>
                           </div>
                     </div> 
-                  </div>
-            </div>
+                </div>
+           
 
-            <div class="container-fluid ">
-        
                     <div class="row mt-4">
-                            <div class="col ms-1">
+                            <div class="col ">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item " role="presentation">
                           <button class="nav-link businessbtn2 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
@@ -99,17 +106,14 @@
                       </ul>
                             </div>
                    </div>
-                       
-                  
-                <div class="container-fluid">
-    
-                          <div class="tab-content" id="pills-tabContent">
+                      
+                    <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"> 
                               <div class="row mt-3 text-center">
     
-                              <div class="col mx-3">
+                              <div class="col ">
                                 <div class="float-end negBtn check">
-                                    <button type="button" class="btn btn-outline-primary ">
+                                    <button type="button" class="btn btn-outline-primary userBtn">
                                        <input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckIndeterminate"> <span>2 Selected</span>
                                     </button>
                                    
@@ -132,24 +136,24 @@
                                       </select>
                                 </div>
                                    
-
-                                <table class="table table1">
-                                  <thead class="tableBorder ">
+                                <div class="table-responsive">
+                                <table class="table border">
+                                  <thead >
                                     <tr>
                                       <th ><input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckDefault"></th>
-                                      <th >Name</th>
-                                      <th >Email</th>
+                                      <th class="text-start" >Name</th>
+                                      <th class="text-start">Email</th>
                                       <th>Reporting</th>
                                       <th >Role</th>
                                       <th >Last Session</th>
                                       <th >Date of Creation</th>
                                     </tr>
                                   </thead>
-                                  <tbody class="tableBorder">
+                                  <tbody >
                                     <tr>
                                       <td><input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckDefault"></td>
-                                      <td>John Doe</td>
-                                      <td>test@website.com</td>
+                                      <td class="text-start">John Doe</td>
+                                      <td class="text-start">test@website.com</td>
                                       <td>John Doe</td>
                                       <td>Admin</td>
                                       <td>1 day ago</td>
@@ -158,18 +162,8 @@
                                    
                                     <tr>
                                         <td><input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckDefault"></td>
-                                        <td>John Doe</td>
-                                        <td>test@website.com</td>
-                                        <td>John Doe</td>
-                                        <td>Admin</td>
-                                        <td>1 day ago</td>
-                                        <td>27-01-2022</td>
-                                      </tr>
-                                   
-                                      <tr>
-                                        <td><input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckDefault"></td>
-                                        <td>John Doe</td>
-                                        <td>test@website.com</td>
+                                        <td class="text-start">John Doe</td>
+                                        <td class="text-start">test@website.com</td>
                                         <td>John Doe</td>
                                         <td>Admin</td>
                                         <td>1 day ago</td>
@@ -178,8 +172,18 @@
                                    
                                       <tr>
                                         <td><input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckDefault"></td>
+                                        <td class="text-start">John Doe</td>
+                                        <td class="text-start">test@website.com</td>
                                         <td>John Doe</td>
-                                        <td>test@website.com</td>
+                                        <td>Admin</td>
+                                        <td>1 day ago</td>
+                                        <td>27-01-2022</td>
+                                      </tr>
+                                   
+                                      <tr>
+                                        <td><input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckDefault"></td>
+                                        <td class="text-start">John Doe</td>
+                                        <td class="text-start">test@website.com</td>
                                         <td>John Doe</td>
                                         <td>Admin</td>
                                         <td>1 day ago</td>
@@ -187,8 +191,8 @@
                                       </tr>
                                       <tr>
                                         <td><input class="form-check-input radiobtn" type="checkbox" value="" id="flexCheckDefault"></td>
-                                        <td>John Doe</td>
-                                        <td>test@website.com</td>
+                                        <td class="text-start">John Doe</td>
+                                        <td class="text-start">test@website.com</td>
                                         <td>John Doe</td>
                                         <td>Admin</td>
                                         <td>1 day ago</td>
@@ -196,33 +200,27 @@
                                       </tr>
                                   </tbody>
                                 </table>
-                                
+                              </div>
                               </div>
       
                             </div>
                               <div class="row">
-                                  <div class="col  mx-5 ">
+                                  <div class="col  m-4 ">
                                   
-                                          <nav aria-label="Page navigation example ">
-                                              <ul class="pagination pagination-gap float-end ">
-                                                <li class="page-item">
-                                                    <a class="page-link btn-chevron-left preBtn" href="#" aria-label="Previous">First  </a>
-                                                   
-                                                </li>
-                                                <li class="page-item"> <button class="arrorBtn py-1 me-2"><i class="las la-angle-double-left"></i></button></li>
-                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                                <li class="page-item"> <button class="arrorBtn  py-1 me-1"><i class="las la-angle-double-right"></i></button></li>
-                                                <li class="page-item">
-                                                  <a class="page-link btn-chevron preBtn" href="#" aria-label="Next">Last</a>
-                                                </li>
-                                              </ul>
-                                            </nav>
+                                    <nav aria-label="Page navigation example">
+                                      <ul class="pagination float-end">
+                                        <li class="page-item "><a class="page-link next" href="#">First</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-left"></i></a></li>
+                                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-right"></i></a></li>
+                                        <li class="page-item"><a class="page-link next" href="#">Last</a></li>
+                                      </ul>
+                                    </nav>
                                   </div>
                              
                           </div>
@@ -243,9 +241,9 @@
                                           </select>
                                     </div>
                                        
-    
-                                    <table class="table table1">
-                                      <thead class="tableBorder ">
+                                    <div class="table-responsive">
+                                    <table class="table border">
+                                      <thead>
                                         <tr>
                                           <th >Uploaded By</th>
                                           <th >Date</th>
@@ -256,7 +254,7 @@
                                           <th >Failed</th>
                                         </tr>
                                       </thead>
-                                      <tbody class="tableBorder">
+                                      <tbody>
                                         <tr>
                                           <td>John Doe</td>
                                           <td>27-01-2022</td>
@@ -308,47 +306,39 @@
                                           </tr>
                                       </tbody>
                                     </table>
+                                  </div>
                                     
                                   </div>
                            
                                   <div class="row">
                                     <div class="col  mx-5 ">
                                     
-                                            <nav aria-label="Page navigation example ">
-                                                <ul class="pagination pagination-gap float-end ">
-                                                  <li class="page-item">
-                                                      <a class="page-link btn-chevron-left preBtn" href="#" aria-label="Previous">First  </a>
-                                                     
-                                                  </li>
-                                                  <li class="page-item"> <button class="arrorBtn py-1 me-2"><i class="las la-angle-double-left"></i></button></li>
-                                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                                  <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                                  <li class="page-item"> <button class="arrorBtn  py-1 me-1"><i class="las la-angle-double-right"></i></button></li>
-                                                  <li class="page-item">
-                                                    <a class="page-link btn-chevron preBtn" href="#" aria-label="Next">Last</a>
-                                                  </li>
-                                                </ul>
-                                              </nav>
+                                      <nav aria-label="Page navigation example">
+                                        <ul class="pagination float-end">
+                                          <li class="page-item "><a class="page-link next" href="#">First</a></li>
+                                          <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-left"></i></a></li>
+                                          <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                          <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-right"></i></a></li>
+                                          <li class="page-item"><a class="page-link next" href="#">Last</a></li>
+                                        </ul>
+                                      </nav>
                                     </div>
                                
                             </div>
                               
                             </div>
     
-                        </div>
+                    </div>
+           </div>
     
-                </div>
-                </div>
+       </div>
+    </div>
           
-
-
-     
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
       integrity="sha512-qzrZqY/kMVCEYeu/gCm8U2800Wz++LTGK4pitW/iswpCbjwxhsmUwleL1YXaHImptCHG0vJwU7Ly7ROw3ZQoww=="

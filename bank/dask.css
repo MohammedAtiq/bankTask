@@ -21,6 +21,22 @@ body{
     height: 100vh;
 }
 
+.logInIcon{
+    background-color: white;
+    border: none;
+    padding: 0;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.logInIcon:hover{
+    background-color: white;
+}
+
+
+
 #main_sidebar .list a span{display:none}
 
 #main_sidebar.show {width: 250px;}
@@ -38,6 +54,7 @@ body{
     flex-direction: column;
     min-width: 525px;
     position: relative;
+    margin: 0 15px;
 }
 
 .mainlogo {
@@ -52,7 +69,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
     height: 50px;
 }
 
@@ -83,11 +99,10 @@ body{
 
 .head p{
     padding: 0 10px;
-    height: 32px;
-    margin: 10px;
     font-size:14px;
     font-weight:400;
     color: #666666;
+     margin: 0;
 }
 .head h5{
     font-size:20px;
@@ -98,8 +113,8 @@ body{
 
 .head{
     border-bottom: 1px solid #E8E8E8;
-    margin: 10px -12px;
-    padding: 0 13px;
+    margin: 10px -27px 30px;
+    padding: 0 10px;
 }
 
 .input-group{
@@ -107,52 +122,67 @@ body{
     
 }
 
-.input-group span{
-    background-color:#D3E4FF;
-    border: 1px solid #D3E4FF;
+.box1 span{
+    background-color:#D3E4FF !important;
+    border: 1px solid #D3E4FF !important;
     border-radius:3px;
-    color:#212529;
+    color:#212529 !important;
     font-weight:600;
     font-size:14px;
 }
 
-.input-group input{
-    border: 1px solid #D3E4FF;
+.box1 input{
+    border: 1px solid #D3E4FF !important;
     border-radius:3px;
     font-size:14px;
+    background-color:#EEF5FF;
 }
 
-.box2 .nav{
-    border-radius: 3px;
-    height: 40px;
-    width: 314px;
-    padding: 0;
-    border: 1px solid #D3E4FF;
-    background-color:  #EEF5FF;
-} 
-.box2 button{
-   padding:10px 18px 8px 18px;
-   color: black;
+.dropdown-menu{
+    min-width:108px;
+    padding: 0px;
+}
+.dropdown-menu button{
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #333;
+}
+
+.dropdown-menu button:hover{
+    background-color:rgb(236, 236, 236);
+    color: #000000;
+}
+
+.box2 .nav-link{
+   padding:10px 18px 8px 17px;
+   color: #212529;
    font-size: 13px;
     font-weight: 600;
+    border: 1px solid #D3E4FF;
+    background-color:  #EEF5FF;
 } 
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
     background-color: #33A9FF;
+    border-color: #33A9FF;
 }
 
 .nav-pills .nav-link {
     border-radius:0;
 }
 
-.box2 li{
-    border-right: 1px solid #D3E4FF;
-} 
 
-.marginBox{
-    margin: 17px 12px 0px 12px;
-}
+.box2 li:first-child .nav-link{border-radius: 3px 0 0 3px;}
+.box2 li:last-child .nav-link{border-radius: 0 3px 3px 0;}
+
+
+.box2 li:not(:last-child) .nav-link{border-right: none;}
+
 
 .box3{
     margin:20px 10px;
@@ -211,12 +241,7 @@ body{
     padding: 15px 10px 0px 10px;
 }
 
-.table th{
-    font-size:13px;
-    font-weight:600;
-    color:#285CA0;
-    padding: 18px !important;
-}
+
 
 .table td{
     font-size:13px;
@@ -225,11 +250,8 @@ body{
     padding: 18px !important;
 }
 
-.tableBorder{
-    border: 1px solid #EEEEEE;
-}
 
-.tableBorder a{
+tbody a{
     text-decoration: none;
 }
 
@@ -274,14 +296,15 @@ body{
     font-size:14px;
     font-weight:600;
     color:#285CA0;
-    padding: 18px !important;
+    padding: 18px 10px !important;
 }
 
 .table td{
     font-size:14px;
     font-weight:400;
     color:#444444;
-    padding: 18px !important;
+    vertical-align: middle;
+    padding: 12px !important;
 }
 
 /* .table td span {
@@ -306,20 +329,9 @@ body{
         text-align: center;
 }
 
-.arrorBtn{
-    border: 1px solid #E3E9EF;
-    border-radius: 25px;
-}
-
-.preBtn{
-    border-radius:25px !important;
-    padding: 5px 24px;
-}
-
 .icontoggle img {
     cursor: pointer;
 }
-
 
 /* ___________________________________creatBusiness */
 
@@ -380,32 +392,21 @@ body{
     background-color:#33A9FF;
     color:white;
     border-radius:3px !important;
-    margin-top: -70px;
+    margin-top: -55px;
 }
 
-/* .businessbtn1:hover{
-    background-color:#0682db;
-} */
-
-.businessbtn1 a{
-    text-decoration: none;
-    color:white;
-}
 
 .businessbtn2{
     color:#444444;
     font-size: 13px;
     font-weight:400;
-    margin: 0 8px;
+    margin: 0 8px 0 0;
 border: 1px solid #E3E9EF !important;
 padding: 6px 15px 3px 15px;
 border-radius: 40px !important;
 }
 
-.businessbtn a{
-    text-decoration: none;
-    color: white;
-}
+
 
 
 /* ____________________________________________SettingForm */
@@ -528,8 +529,8 @@ border-radius: 40px !important;
     position: relative;
     background: #fff;
     border: 1px solid #D5E5FB;
-    margin: 15px;
-}
+    margin:  15px 0;
+} 
 
 .dragArea {
     max-width: 500px;
@@ -587,9 +588,7 @@ border-radius: 40px !important;
 
 
 .btn{border-radius:3px;}
-.loanForm{
-    margin: 10px 5px ;
-}
+
 
 .loanBtn1 button{
     margin-top: 31px;
@@ -635,7 +634,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {display: none;}
     color:var(--skyblue);
 }
 
-.loanbtn a:hover{
+.loanbtn:hover{
     color:white;
 }
 
@@ -645,16 +644,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {display: none;}
 
 /*--------------------------------- view Data  */
 
-.btnMarg{
-    margin: 0 35px;
-}
 
-.btnMarg a{
-    text-decoration: none;
-}
 
-.btnMarg a:hover{
+.btnMarg:hover{
     color: white;
+    background-color:var(--skyblue);
+    border: 1px solid var(--skyblue);
 }
 
 
@@ -704,8 +699,8 @@ padding: 5px 20px;
 }
 
 .check button:hover{
-    background-color:var(--skyblue);
-    color:white !important;
+    background-color:rgb(230, 230, 230);
+    color:black !important;
 }
 
 .radiobtn{
@@ -744,6 +739,7 @@ line-height: 15px
 }
 
 
+
 /*------------------------- creat User  */
 .cardSpan{
     font-weight: 400;
@@ -759,4 +755,36 @@ color: rgba(0, 0, 0, 0.5);
     right: 15px;
     border-radius: 20px;
     padding: 5px 25px;
+}
+
+button a{
+    text-decoration:none;
+    color: white;
+}
+
+button a:hover{
+    color: white;
+}
+
+.next{
+    padding: 5px 10px !important;
+    width: auto !important;
+}
+
+.border{
+    border: 1px solid #EEEEEE !important;
+}
+
+.modalTable th{
+    font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #555555;
+padding: 8px 5px !important;
+}
+
+.modalTable td{
+    text-align: center;
+    padding: 7px 5px !important;
 }

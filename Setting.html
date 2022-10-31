@@ -33,23 +33,30 @@
           />
 
           <div class="list">
-             <a href="/logIn.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
-             <a href="/CreateBusiness.html"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
-             <a href="/Setting.html" class="active"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
-             <a href="/Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
-             <a href="/Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
+             <a href="dashboard.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
+             <a href="Business.html"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
+             <a href="Setting.html" class="active"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
+             <a href="Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
+             <a href="Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
           </div>
         </div>
       </div>
       <div id="main_page">
-        <div class="logo">
           <nav class="navbarMain">
             <span class="icontoggle ms-2">
               <img src="bank/images/hemburger.svg" alt="">
             </span>
-            <div class="detail mx-4 ">
-              <span class="me-2"> <img src="bank/images/bell.svg" alt=""> </i></span>
-              <span><img src="bank/images/usersideicon.svg" alt=""> </i></span>
+            <div class="detail mx-3 d-flex ">
+              <div class="me-2"> <img src="bank/images/bell.svg" alt=""> </div>
+              <div  class="dropdown">
+                <button class="btn dropdown-toggle  logInIcon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="bank/images/usersideicon.svg" alt=""> 
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <button onclick="location.href='login.html'" style="cursor: pointer; border: none"><i class="fa fa-user mx-2" aria-hidden="true"></i> Profile</button>
+                  <button onclick="location.href='login.html'" style="cursor: pointer;  border: none"> <i class="fa fa-sign-out mx-2" aria-hidden="true"> </i>Login</button>
+                </ul>
+              </div>
             </div>
           </nav>
 
@@ -59,10 +66,10 @@
               <div class="col"><h5>Settings</h5></div>
             </div>
 
-                <div class="row mt-4">
+                <div class="row mt-3">
 
-                        <div class="col ms-1">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <div class="col">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item " role="presentation">
                       <button class="nav-link businessbtn2 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Configuration</button>
                     </li>
@@ -74,35 +81,34 @@
                     </li>
                   </ul>
                         </div>
-                        </div>
+               </div>
                    
-              
-            <div class="container-fluid">
-
+        
                       <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"> 
                           <div class="row mt-3 text-center">
 
-                          <div class="col mx-3">
-                            <button type="button" class="btn-primary businessbtn1 float-end mx-3"><a href="/Configuration.html">Add New</a></button>
-                            <table class="table table1">
-                              <thead class="tableBorder ">
+                          <div class="col ">
+                            <button type="button" class="btn-primary businessbtn1 float-end "  onclick="location.href='Configuration.html';">Add New</button>
+                            <div class="table-responsive">
+                            <table class="table border">
+                              <thead >
                                 <tr>
                                   <th >#</th>
-                                  <th >Loan Types</th>
-                                  <th >Subcategory / Scheme</th>
-                                  <th>Notification</th>
+                                  <th class="text-start">Loan Types</th>
+                                  <th class="text-start">Subcategory / Scheme</th>
+                                  <th class="text-start">Notification</th>
                                   <th >Created Date</th>
                                   <th >Created By</th>
                                   <th >Actions</th>
                                 </tr>
                               </thead>
-                              <tbody class="tableBorder">
+                              <tbody >
                                 <tr>
                                   <td>1</td>
-                                  <td>Personal Loan</td>
-                                  <td>Insta Loan</td>
-                                  <td>SMS</td>
+                                  <td class="text-start" >Personal Loan</td>
+                                  <td class="text-start">Insta Loan</td>
+                                  <td class="text-start">SMS</td>
                                   <td>01-01-2022</td>
                                   <td>John Doe</td>
                                   <td>
@@ -112,9 +118,9 @@
                                
                                 <tr>
                                   <td>2</td>
-                                  <td>Personal Loan</td>
-                                  <td>Insta Loan</td>
-                                  <td>SMS</td>
+                                  <td class="text-start" >Personal Loan</td>
+                                  <td class="text-start" >Insta Loan</td>
+                                  <td class="text-start">SMS</td>
                                   <td>01-01-2022</td>
                                   <td>John Doe</td>
                                   <td>
@@ -124,9 +130,9 @@
                                
                                 <tr>
                                   <td>3</td>
-                                  <td>Personal Loan</td>
-                                  <td>Insta Loan</td>
-                                  <td>SMS</td>
+                                  <td class="text-start" >Personal Loan</td>
+                                  <td class="text-start" >Insta Loan</td>
+                                  <td class="text-start">SMS</td>
                                   <td>01-01-2022</td>
                                   <td>John Doe</td>
                                   <td>
@@ -150,6 +156,7 @@
                                
                               </tbody>
                             </table>
+                            </div>
                             
                           </div>
   
@@ -157,26 +164,20 @@
                           <div class="row">
                               <div class="col  mx-5 ">
                               
-                                      <nav aria-label="Page navigation example ">
-                                          <ul class="pagination pagination-gap float-end ">
-                                            <li class="page-item">
-                                                <a class="page-link btn-chevron-left preBtn" href="#" aria-label="Previous">First  </a>
-                                               
-                                            </li>
-                                            <li class="page-item"> <button class="arrorBtn py-1 me-2"><i class="las la-angle-double-left"></i></button></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                            <li class="page-item"> <button class="arrorBtn  py-1 me-1"><i class="las la-angle-double-right"></i></button></li>
-                                            <li class="page-item">
-                                              <a class="page-link btn-chevron preBtn" href="#" aria-label="Next">Last</a>
-                                            </li>
-                                          </ul>
-                                        </nav>
+                                <nav aria-label="Page navigation example">
+                                  <ul class="pagination float-end">
+                                    <li class="page-item "><a class="page-link next" href="#">First</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-left"></i></a></li>
+                                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-right"></i></a></li>
+                                    <li class="page-item"><a class="page-link next" href="#">Last</a></li>
+                                  </ul>
+                                </nav>
                               </div>
                          
                       </div>
@@ -233,8 +234,9 @@
                             </div>
                           </div> 
                        
-                          <table class="table table1 text-center">
-                            <thead class="tableBorder ">
+                          <div class="table-responsive">
+                          <table class="table border text-center">
+                            <thead >
                               <tr>
                                 <th >Date</th>
                                 <th >Uploaded By</th>
@@ -243,7 +245,7 @@
                                 <th >Success Count</th>
                               </tr>
                             </thead>
-                            <tbody class="tableBorder">
+                            <tbody>
                               <tr>
                                 <td>27-01-2022</td>
                                 <td>Vijay Kumar</td>
@@ -287,6 +289,7 @@
                             </tbody>
                           </table>
                       </div>
+                    </div>
 
                      
 
@@ -294,7 +297,8 @@
                     </div>
 
             </div>
-            </div>
+    </div>
+    </div>
 
            
      

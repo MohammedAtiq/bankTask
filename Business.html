@@ -33,24 +33,30 @@
           />
 
           <div class="list">
-             <a href="/logIn.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
-             <a href="/Business.html" class="active"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
-             <a href="/Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
-             <a href="/Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
-             <a href="/Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
+             <a href="dashboard.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
+             <a href="Business.html" class="active"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
+             <a href="Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
+             <a href="Loan.html"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
+             <a href="Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
           </div>
         </div>
       </div>
       <div id="main_page">
-        <div class="logo">
           <nav class="navbarMain">
             <span class="icontoggle ms-2">
               <img src="bank/images/hemburger.svg" alt="">
             </span>
-            <div class="detail mx-4 ">
-              <span class="me-2"> <img src="bank/images/bell.svg" alt=""> </i></span>
-              <span><img src="bank/images/usersideicon.svg" alt=""> </i></span>
-            </div>
+            <div class="detail mx-4 d-flex ">
+              <div class="me-2"> <img src="bank/images/bell.svg" alt=""> </div>
+              <div  class="dropdown">
+                <button class="btn dropdown-toggle  logInIcon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="bank/images/usersideicon.svg" alt=""> 
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <button onclick="location.href='login.html'" style="cursor: pointer; border: none"><i class="fa fa-user mx-2" aria-hidden="true"></i> Profile</button>
+                  <button onclick="location.href='login.html'" style="cursor: pointer;  border: none"> <i class="fa fa-sign-out mx-2" aria-hidden="true"> </i>Login</button>
+                </ul>
+              </div>
           </nav>
 
           <!-- ________________________________________________container  -->
@@ -60,39 +66,41 @@
               <div class="col-auto"><p>Business</p></div>
             </div>
 
-            <div class="container-fluid ">
-                <div class="row mt-4">
+           
+                <div class="row">
                     <div class="col">
-                        <button type="button" class="btn-primary  float-end mx-3">Create Business</button>
+                        <button type="button" class="btn-primary  float-end " onclick="location.href='CreateBusiness.html';">Create Business</button>
                     </div>
                 </div>
 
-                <div class="row mt-3 text-center">
-                    <div class="col mx-3">
+                <div class="row mt-3">
+                    <div class="col">
                       <div class="table-responsive">
-                      <table class="table table1">
-                        <thead class="tableBorder ">
+                      <table class="table border">
+                        <thead >
                           <tr>
-                            <th >#</th>
+                            <th class="text-center">#</th>
                             <th >Business Name</th>
                             <th >Mobile</th>
                             <th>Email</th>
-                            <th >Users</th>
-                            <th >Created Date</th>
-                            <th >View</th>
-                            <th >Actions</th>
+                            <th class="text-center">Users</th>
+                            <th  class="text-center">Created Date</th>
+                            <th  class="text-center">View</th>
+                            <th  class="text-center">Actions</th>
                           </tr>
                         </thead>
-                        <tbody class="tableBorder">
+                        <tbody >
                           <tr>
-                            <td>1</td>
+                            <td class="text-center">1</td>
                             <td>John Doe</td>
                             <td>12345667890</td>
                             <td>test@email.com</td>
-                            <td>01</td>
-                            <td>01-01-2022</td>
-                            <td> <a href="">View Licenses</a></td>
-                            <td>
+                            <td class="text-center">01</td>
+                            <td class="text-center">01-01-2022</td>
+                            <td class="text-center"> <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#exampleModal" >View Licenses</a></td>
+
+                            
+                            <td class="text-center">
                                 <button class="editBtn"><i class="las la-edit "></i></button>
                                 <div class="form-check form-switch switBtn">
                                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -101,14 +109,14 @@
                           </tr>
                          
                           <tr>
-                            <td>2</td>
+                            <td class="text-center">2</td>
                             <td>John Doe</td>
                             <td>12345667890</td>
                             <td>test@email.com</td>
-                            <td>05</td>
-                            <td>01-01-2022</td>
-                            <td> <a href="">View Licenses</a></td>
-                            <td>
+                            <td class="text-center">05</td>
+                            <td class="text-center">01-01-2022</td>
+                            <td class="text-center"> <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#exampleModal" >View Licenses</a></td>
+                            <td class="text-center">
                                 <button class="editBtn"><i class="las la-edit "></i></button>
                                 <div class="form-check form-switch switBtn">
                                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -117,14 +125,15 @@
                           </tr>
                          
                           <tr>
-                            <td>3</td>
+                            <td class="text-center">3</td>
                             <td>John Doe</td>
                             <td>12345667890</td>
                             <td>test@email.com</td>
-                            <td>08</td>
-                            <td>01-01-2022</td>
-                            <td> <a href="">View Licenses</a></td>
-                            <td>
+                            <td class="text-center">08</td>
+                            <td class="text-center">01-01-2022</td>
+                            <td class="text-center"> <a href="javascript:void(0);"  data-bs-toggle="modal" data-bs-target="#exampleModal" >View Licenses</a></td>
+
+                            <td class="text-center">
                                 <button class="editBtn"><i class="las la-edit "></i></button>
                                 <div class="form-check form-switch switBtn">
                                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -133,16 +142,16 @@
                           </tr>
                          
                           <tr>
-                            <td>4</td>
+                            <td class="text-center">4</td>
                           </tr>
                           <tr>
-                            <td>5</td>
+                            <td class="text-center">5</td>
                           </tr>
                           <tr>
-                            <td>6</td>
+                            <td class="text-center">6</td>
                           </tr>
                           <tr>
-                            <td>7</td>
+                            <td class="text-center">7</td>
                           </tr>
                          
                          
@@ -152,15 +161,84 @@
                       
                     </div>
                   </div>
+           
+
+
+            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content ">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-weight: 700;" >Business Name Here</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered modalTable">
+                        <thead>
+                          <tr>
+                            <th >S.No.</th>
+                            <th  class="text-start">Product Access</th>
+                            <th >No. of License</th>
+                            <th>Start Date</th>
+                            <th >Expiry Date</th>
+                            <th >Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td class="text-start">DMS</td>
+                            <td>3</td>
+                            <td>01-01-2022</td>
+                            <td>01-01-2022</td>
+                            <td class="text-center">
+                              <button class="editBtn"><i class="las la-edit "></i></button>
+                              <div class="form-check form-switch switBtn">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                              </div>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td class="text-start">DMS</td>
+                            <td>3</td>
+                            <td>01-01-2022</td>
+                            <td>01-01-2022</td>
+                            <td class="text-center">
+                              <button class="editBtn"><i class="las la-edit "></i></button>
+                              <div class="form-check form-switch switBtn">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                              </div>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td class="text-start">DMS</td>
+                            <td>3</td>
+                            <td>01-01-2022</td>
+                            <td>01-01-2022</td>
+                            <td class="text-center">
+                              <button class="editBtn"><i class="las la-edit "></i></button>
+                              <div class="form-check form-switch switBtn">
+                                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                              </div>
+                          </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                   </div>
+                   
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="container-fluid">
                 <div class="row">
                     <div class="col  mx-5 ">
 
                       <nav aria-label="Page navigation example">
                         <ul class="pagination float-end">
-                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item "><a class="page-link next" href="#">First</a></li>
                           <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-left"></i></a></li>
                           <li class="page-item"><a class="page-link active" href="#">1</a></li>
                           <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -169,14 +247,18 @@
                           <li class="page-item"><a class="page-link" href="#">5</a></li>
                           <li class="page-item"><a class="page-link" href="#">6</a></li>
                           <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-right"></i></a></li>
-                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                          <li class="page-item"><a class="page-link next" href="#">Last</a></li>
                         </ul>
                       </nav>
                     
                          
                     </div>
                 </div>
+        
             </div>
+      </div>
+     </div>
+  
      
 
     <script

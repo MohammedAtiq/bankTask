@@ -34,23 +34,30 @@
           />
 
           <div class="list">
-             <a href="/logIn.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
-             <a href="/CreateBusiness.html"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
-             <a href="/Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
-             <a href="/Loan.html" class="active"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
-             <a href="/Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
+             <a href="dashboard.html"> <img src="bank/images/home-icon1.svg"alt=""> <span> Dashboard</span>  </a>
+             <a href="CreateBusiness.html"> <img src="bank/images/business.svg" alt=""> <span> Business </span></a>
+             <a href="Setting.html"> <img src="bank/images/settings-icon.svg"alt=""> <span>Settings </span> </a>
+             <a href="Loan.html" class="active"> <img src="bank/images/Group 1025.svg" alt=""> <span>Loan </span> </a>
+             <a href="Users.html"> <img src="bank/images/users.svg"alt=""> <span> Users</span> </a>       
           </div>
         </div>
       </div>
       <div id="main_page">
-        <div class="logo">
           <nav class="navbarMain">
             <span class="icontoggle ms-2">
               <img src="bank/images/hemburger.svg" alt="">
             </span>
-            <div class="detail mx-4 ">
-              <span class="me-2"> <img src="bank/images/bell.svg" alt=""> </i></span>
-              <span><img src="bank/images/usersideicon.svg" alt=""> </i></span>
+            <div class="detail mx-3 d-flex ">
+              <div class="me-2"> <img src="bank/images/bell.svg" alt=""> </div>
+              <div  class="dropdown">
+                <button class="btn dropdown-toggle  logInIcon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="bank/images/usersideicon.svg" alt=""> 
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <button onclick="location.href='login.html'" style="cursor: pointer; border: none"><i class="fa fa-user mx-2" aria-hidden="true"></i> Profile</button>
+                  <button onclick="location.href='login.html'" style="cursor: pointer;  border: none"> <i class="fa fa-sign-out mx-2" aria-hidden="true"> </i>Login</button>
+                </ul>
+              </div>
             </div>
           </nav>
 
@@ -60,21 +67,20 @@
               <div class="col"><h5>Loan Listing</h5></div>
             </div>
 
-            <div class="container-fluid ">
-                <div class="row mt-4">
+                <div class="row">
                     <div class="col">
-                        <button type="button" class="btn btn-primary  businessbtn float-end mx-3"><a href="/LoanDataUpload.html">Upload</a></button>
+                        <button type="button" class="btn btn-primary  float-end mx-3" onclick="location.href='LoanDataUpload.html';">Upload</button>
                         
                     </div>
                 </div>
 
 
-                <div class="row loanForm card-body">
+                <div class="row card-body mt-3">
                     <div class="col">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Loan Type</label>
                             <select class="form-select" aria-label="Default select example">
-                              <option selected></option>
+                              <option selected>~Select~</option>
                               <option value="1">One</option>
                               <option value="2">Two</option>
                               <option value="3">Three</option>
@@ -85,7 +91,7 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Sub Loan Type</label>
                             <select class="form-select" aria-label="Default select example">
-                              <option selected></option>
+                              <option selected>~Select~</option>
                               <option value="1">One</option>
                               <option value="2">Two</option>
                               <option value="3">Three</option>
@@ -97,7 +103,7 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Loan Status</label>
                             <select class="form-select" aria-label="Default select example">
-                              <option selected></option>
+                              <option selected>~Select~</option>
                               <option value="1">One</option>
                               <option value="2">Two</option>
                               <option value="3">Three</option>
@@ -109,7 +115,7 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Payment Status</label>
                             <select class="form-select" aria-label="Default select example">
-                              <option selected></option>
+                              <option selected>~Select~</option>
                               <option value="1">One</option>
                               <option value="2">Two</option>
                               <option value="3">Three</option>
@@ -118,7 +124,7 @@
                      
                     </div>
                   </div>
-                <div class="row loanForm card-body">
+                <div class="row  card-body">
                     <div class="col-3">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Loan Account Number</label>
@@ -133,78 +139,78 @@
                     </div>
                     <div class="col d-flex justify-content-end ">
                         <button type="button" class="btn btn-primary mx-2 my-auto">Filter</button>
-                        <button type="button" class="btn btn-outline-primary mx-2 my-auto">Clear</button>
+                        <button type="button" class="btn btn-outline-primary btnMarg mx-2 my-auto">Clear</button>
                         
                     </div>
                   </div>
 
-                <div class="row mt-3 text-center">
-                    <div class="col mx-3">
+                <div class="row mt-3">
+                    <div class="col">
                       <div class="table-responsive">
-                      <table class="table table1">
-                        <thead class="tableBorder ">
+                      <table class="table border">
+                        <thead >
                           <tr>
-                            <th >#</th>
+                            <th class="text-center" >#</th>
                             <th >Loan Account No.</th>
                             <th >Loan Type</th>
-                            <th>Loan Status</th>
-                            <th >Last Payment Status</th>
+                            <th class="text-center">Loan Status</th>
+                            <th class="text-center">Last Payment Status</th>
                             <th >Name</th>
                             <th >Phone No.</th>
-                            <th >Actions</th>
+                            <th class="text-center">Actions</th>
                           </tr>
                         </thead>
-                        <tbody class="tableBorder ">
+                        <tbody >
                           <tr>
-                            <td>1</td>
+                            <td class="text-center">1</td>
                             <td>1111000001</td>
                             <td>Personal Loan</td>
-                            <td>Open</td>
-                            <td>Paid</td>
+                            <td class="text-center">Open</td>
+                            <td class="text-center">Paid</td>
                             <td>John Doe</td>
                             <td><span>12345667890</span></td>
-                            <td>
-                                <button type="button" class="btn btn-outline-primary loanbtn "> <a href="/ViewData.html">View</a> </button>  
+                            <td class="text-center">
+                                <button type="button" class="btn btn-outline-primary loanbtn "onclick="location.href='ViewData.html';">View </button>  
                             </td>
                           </tr>
                          
                           <tr>
-                            <td>2</td>
+                            <td class="text-center">2</td>
                             <td>1111000001</td>
                             <td>Personal Loan</td>
-                            <td>Open</td>
-                            <td>Paid</td>
+                            <td class="text-center">Open</td>
+                            <td class="text-center">Paid</td>
                             <td>John Doe</td>
                             <td><span>12345667890</span></td>
-                            <td>
-                              <button type="button" class="btn btn-outline-primary loanbtn "> <a href="/ViewData.html">View</a> </button>  
-                            </td>
+                            <td class="text-center">
+                              <button type="button" class="btn btn-outline-primary loanbtn "onclick="location.href='ViewData.html';">View </button>  
+                          </td>
                           </tr>
                          
                           <tr>
-                            <td>3</td>
+                            <td class="text-center">3</td>
                             <td>1111000001</td>
                             <td>Personal Loan</td>
-                            <td>Open</td>
-                            <td>Paid</td>
+                            <td class="text-center">Open</td>
+                            <td class="text-center">Paid</td>
                             <td>John Doe</td>
                             <td><span>12345667890</span></td>
-                            <td>
-                              <button type="button" class="btn btn-outline-primary loanbtn "> <a href="/ViewData.html">View</a> </button>  
-                            </td>
+                            <td class="text-center">
+                              <button type="button" class="btn btn-outline-primary loanbtn "onclick="location.href='ViewData.html';">View </button>  
+                          </td>
                           </tr>
                          
                           <tr>
-                            <td>4</td>
+                            <td class="text-center">4</td>
                           </tr>
                           <tr>
-                            <td>5</td>
+                            <td class="text-center">5</td>
                           </tr>
                           <tr>
-                            <td>6</td>
+                            <td class="text-center">6</td>
                           </tr>
                           <tr>
-                            <td>7</td>
+                            <td class="text-center">7</td>
                           </tr>
                          
                          
@@ -214,15 +220,15 @@
                       
                     </div>
                   </div>
-            </div>
+           
 
-            <div class="container-fluid">
+           
                 <div class="row">
                     <div class="col  mx-5 ">
 
                       <nav aria-label="Page navigation example">
                         <ul class="pagination float-end">
-                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                          <li class="page-item"><a class="page-link next" href="#">First</a></li>
                           <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-left"></i></a></li>
                           <li class="page-item"><a class="page-link active" href="#">1</a></li>
                           <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -231,14 +237,16 @@
                           <li class="page-item"><a class="page-link" href="#">5</a></li>
                           <li class="page-item"><a class="page-link" href="#">6</a></li>
                           <li class="page-item"><a class="page-link" href="#"><i class="las la-angle-double-right"></i></a></li>
-                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                          <li class="page-item"><a class="page-link next" href="#">Last</a></li>
                         </ul>
                       </nav>
                     
                          
                     </div>
                 </div>
-            </div>
+              </div>
+       </div>
+    </div>
      
 
     <script
